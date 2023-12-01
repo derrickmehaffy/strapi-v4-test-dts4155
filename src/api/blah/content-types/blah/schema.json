@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "blahs",
+  "info": {
+    "singularName": "blah",
+    "pluralName": "blahs",
+    "displayName": "blah",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "rich": {
+      "type": "blocks"
+    },
+    "media": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
+    },
+    "dz": {
+      "type": "dynamiczone",
+      "components": [
+        "test.test",
+        "test.meh"
+      ]
+    },
+    "test": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::test.test",
+      "inversedBy": "blahs"
+    }
+  }
+}

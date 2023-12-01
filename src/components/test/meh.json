@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_test_mehs",
+  "info": {
+    "displayName": "meh",
+    "icon": "apps"
+  },
+  "options": {},
+  "attributes": {
+    "bool": {
+      "type": "boolean"
+    }
+  }
+}
