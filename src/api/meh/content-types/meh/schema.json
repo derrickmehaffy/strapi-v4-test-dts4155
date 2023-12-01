@@ -1,0 +1,23 @@
+{
+  "kind": "collectionType",
+  "collectionName": "mehs",
+  "info": {
+    "singularName": "meh",
+    "pluralName": "mehs",
+    "displayName": "meh"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "string": {
+      "type": "string"
+    },
+    "admin_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "admin::user"
+    }
+  }
+}

@@ -2,12 +2,18 @@
   "collectionName": "components_test_tests",
   "info": {
     "displayName": "test",
-    "icon": "alien"
+    "icon": "alien",
+    "description": ""
   },
   "options": {},
   "attributes": {
     "string": {
       "type": "string"
+    },
+    "mehs": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::meh.meh"
     }
   }
 }

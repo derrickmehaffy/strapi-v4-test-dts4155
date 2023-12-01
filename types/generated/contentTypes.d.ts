@@ -703,6 +703,29 @@ export interface ApiBlahBlah extends Schema.CollectionType {
   };
 }
 
+export interface ApiMehMeh extends Schema.CollectionType {
+  collectionName: 'mehs';
+  info: {
+    singularName: 'meh';
+    pluralName: 'mehs';
+    displayName: 'meh';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    string: Attribute.String;
+    admin_user: Attribute.Relation<'api::meh.meh', 'oneToOne', 'admin::user'>;
+    createdAt: Attribute.DateTime;
+    updatedAt: Attribute.DateTime;
+    publishedAt: Attribute.DateTime;
+    createdBy: Attribute.Relation<'api::meh.meh', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+    updatedBy: Attribute.Relation<'api::meh.meh', 'oneToOne', 'admin::user'> &
+      Attribute.Private;
+  };
+}
+
 export interface ApiTestTest extends Schema.CollectionType {
   collectionName: 'tests';
   info: {
@@ -744,6 +767,7 @@ declare module '@strapi/types' {
       'plugin::users-permissions.user': PluginUsersPermissionsUser;
       'plugin::i18n.locale': PluginI18NLocale;
       'api::blah.blah': ApiBlahBlah;
+      'api::meh.meh': ApiMehMeh;
       'api::test.test': ApiTestTest;
     }
   }

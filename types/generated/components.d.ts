@@ -16,9 +16,11 @@ export interface TestTest extends Schema.Component {
   info: {
     displayName: 'test';
     icon: 'alien';
+    description: '';
   };
   attributes: {
     string: Attribute.String;
+    mehs: Attribute.Relation<'test.test', 'oneToMany', 'api::meh.meh'>;
   };
 }
 
